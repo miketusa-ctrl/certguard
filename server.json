@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.workers.mike-tusa.certguard/certguard",
+  "title": "CertGuard",
+  "description": "Free SSL/TLS certificate checker: expiry, chain trust, hostname match, TLS version, A/B/C/F grade.",
+  "version": "0.3.0",
+  "websiteUrl": "https://certguard.mike-tusa.workers.dev/",
+  "icons": [{ "src": "https://certguard.mike-tusa.workers.dev/favicon.svg", "mimeType": "image/svg+xml", "sizes": ["any"] }],
+  "remotes": [{
+    "type": "streamable-http",
+    "url": "https://certguard.mike-tusa.workers.dev/mcp",
+    "headers": [{ "name": "Authorization", "description": "Optional. 'Bearer <key>' (free cg_ key) for higher limits. Works without a key.", "isRequired": false, "isSecret": true }]
+  }]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "certguard",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Free on-demand SSL/TLS certificate checker (web page + JSON API + remote MCP server) on Cloudflare Workers",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
