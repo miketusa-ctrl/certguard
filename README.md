@@ -12,13 +12,26 @@ Free SSL/TLS certificate checker: expiry, chain trust, hostname match, TLS versi
 
 CertGuard is a remote MCP server (Streamable HTTP) at `https://certguard.mike-tusa.workers.dev/mcp`. Tools: `check_certificate`.
 
-Cursor, Cline and Windsurf accept this config:
+Cursor and Windsurf accept this config:
 
 ```json
 {
   "mcpServers": {
     "certguard": {
       "type": "http",
+      "url": "https://certguard.mike-tusa.workers.dev/mcp"
+    }
+  }
+}
+```
+
+Cline (MCP Servers > Remote Servers, or `cline_mcp_settings.json`) needs `"type": "streamableHttp"`:
+
+```json
+{
+  "mcpServers": {
+    "certguard": {
+      "type": "streamableHttp",
       "url": "https://certguard.mike-tusa.workers.dev/mcp"
     }
   }
