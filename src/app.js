@@ -12,7 +12,7 @@ import { isRapidApiPath, rapidGate, rapidTier, rapidUserKey, RAPIDAPI_PER_MIN, R
 export { ipBucket };
 
 const MAX_BODY = 16 * 1024;
-// Glama connector ownership claim, served at /.well-known/glama.json. Replace the placeholder with your own claim token from glama.ai.
+// Glama connector ownership claim, served at /.well-known/glama.json. Set your own glama.ai claim token as the GLAMA_CLAIM Worker secret (or replace the placeholder, if present).
 export const GLAMA_CLAIM_JSON = '{"$schema":"https://glama.ai/mcp/schemas/connector.json","claim":"<GLAMA_CLAIM_TOKEN>"}';
 const MEM_CACHE_MAX = 300;
 const memCache = new Map(); // key -> { body, exp, stored }
