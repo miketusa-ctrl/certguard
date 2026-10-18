@@ -42,6 +42,8 @@ npx wrangler@4 dev      # local dev server
 
 `wrangler.toml` is a template: create your own KV namespaces / D1 databases / rate-limit namespaces and replace the `<PLACEHOLDER>` values before `npx wrangler@4 deploy`. Any secrets the Worker reads go in `wrangler secret put` (or `.dev.vars` locally), never in the repo.
 
+Optional Worker secrets (leave unset if you do not need them): `RAPIDAPI_PROXY_SECRET` (only needed if you sell the API through RapidAPI; it must match the X-RapidAPI-Proxy-Secret header RapidAPI adds).
+
 ## Third-party data
 
 `src/roots.js` is generated from the Mozilla root store (via curl's cacert.pem), which Mozilla publishes under MPL-2.0 (https://mozilla.org/MPL/2.0/).
